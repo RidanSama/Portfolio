@@ -1,0 +1,56 @@
+:root{
+    --primary: hsl(200,100%,50%);
+    --primary-hsl: 220,100%,50%;
+    --primary-hs: 220,100%;
+    --primary-h: 220;
+    
+    --secondary: hsl(250,100%,41%);
+    --secondary-hsl: 250,100%,50%;
+    --secondary-hs: 250,100%;
+    --secondary-h: 250;
+    
+    --succes: hsl(113, 100%, 50%);
+    --succes-hsl: 113,100%,50%;
+    --succes-hs: 113,100%;
+    --succes-h: 113;
+    
+    --info: hsl(160,100%,50%);
+    --info-hsl: 160,100%,50%;
+    --info-hs: 160,100%;
+    --info-h: 160;
+    
+    --danger: hsl(0,100%,50%);
+    --danger-hsl: 0,100,50%;
+    --danger-hs: 0,100;
+    --danger-h: 0;
+
+    --warning: hsl(60,100%,50%);
+    --warning-hsl: 60,100%,50%;
+    --warning-hs: 60,100%;
+    --warning-h: 60;
+
+    --magic: hsl(290,100%,50%);
+    --magic-hsl: 290,100%,50%;
+    --magic-hs: 290,100%;
+    --magic-h: 290;
+
+    --gray-95: hsl(0,0%,95%);
+    --gray-90: hsl(0,0%,90%);
+    --gray-85: hsl(0,0%,85%);
+    --gray-80: hsl(0,0%,80%);
+    --gray-75: hsl(0,0%,75%);
+    --gray-70: hsl(0,0%,70%);
+    --gray-65: hsl(0,0%,65%);
+    --gray-60: hsl(0,0%,60%);
+    --gray-55: hsl(0,0%,55%);
+    --gray-50: hsl(0,0%,50%);
+    --gray-45: hsl(0,0%,45%);
+    --gray-40: hsl(0,0%,40%);
+    --gray-35: hsl(0,0%,35%);
+    --gray-30: hsl(0,0%,30%);
+    --gray-25: hsl(0,0%,25%);
+    --gray-20: hsl(0,0%,20%);
+    --gray-15: hsl(0,0%,15%);
+    --gray-10: hsl(0,0%,10%);
+    --gray-05: hsl(0,0%,05%);
+}

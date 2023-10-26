@@ -1,0 +1,20 @@
+* , :root , ::before , ::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    border-style: solid;
+    border-radius: 0;
+    outline: none;
+    user-select: none;
+    list-style: none;
+}
+.hidden{
+    display: none;
+}
+input:is( [ type="email" ] , [ type="text" ] , [ type="password" ] , [ type="url" ] , [ type="search" ] , [ type="tel" ] ){
+    user-select: text;
+}

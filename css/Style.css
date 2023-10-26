@@ -1,0 +1,300 @@
+@import url( "root/Colors.css" );
+nav , main {
+    transition: all ease-in-out 300ms;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7dvh;
+    display: flex;
+    padding-inline: 40%;
+    & > h1{
+        display: inline;
+        flex: 1;
+        text-align: center;
+        position: fixed;
+        &::after{
+            display: inline;
+            animation: typing steps(100) 15s infinite;
+            font-size: 25px;
+            content: ' ';
+        }
+    }
+}
+main{
+    margin-top: 7dvh;
+    width: 100%;
+    height: 100dvh;
+    & > ul:first-child{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 5dvh;
+        align-items: center;
+        justify-items: center;
+        list-style: none;
+        padding-inline: 20%;
+        gap: 5%;
+        & > li{
+            flex: 1;
+            height: 4dvh;
+            text-align: center;
+            cursor: pointer;
+            & > label{
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+    & > section:nth-child( 2 ){
+        padding: 5dvh 3%;
+        & > h1 {
+            text-align: center;
+            margin-bottom: 4dvh;
+        }
+    }
+    & > section:nth-child( 3 ){
+        width: 100%;
+        display: grid;
+        row-gap: 5dvw;
+        column-gap: 5dvw;
+        grid-template-columns: repeat( auto-fit , minmax( 200px ,  1fr ) );
+        padding: 2dvh 2dvw;
+        & > div{
+            height: 20dvh;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 16px;
+            cursor: pointer;
+            overflow: hidden;
+            & > iframe , & > img{
+                display: block;
+                width: 100%;
+                height: 80%;
+                cursor: pointer;
+            }
+            & > h1{
+                display: block;
+                width: 100%;
+                height: 20%;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+}
+#them-light:checked{
+    & ~ nav{
+        color: white;
+        background-color: var(--primary);
+        & > ul > li{
+            color:  white;
+            &:active{
+                color: transparent;
+            }
+        }
+    }
+    & ~ main{
+        color: black;
+        background-color: var(--gray-90);
+        & > ul:first-child{
+            background-color: var(--gray-85);
+            & > li{
+                background-color: var(--primary);
+                border: solid hsl( var(--primary-hs) , 60% ) 1px;
+                border-radius: 5px;
+                & > label{
+                    color: white;
+                    &:active{
+                        color: transparent;
+                    }
+                }
+            }
+        }
+        & > section:last-child > div{
+            border-color: var(--primary);
+            & > h1 > a{
+                color: black;
+                &:active{
+                    color: transparent;
+                }
+                &:visited{
+                    color: hsl( var(--info-hs) , 70% );
+                }
+            }
+        }
+    }
+}
+#them-dark:checked{
+    & ~ nav{
+        color: black;
+        background-color: var(--succes);
+        & > ul > li{
+            color:  black;
+            &:active{
+                color: transparent;
+            }
+        }
+    }
+    & ~ main{
+        color: white;
+        background-color: var(--gray-20);
+        & > ul:first-child{
+            background-color: var(--gray-35);
+            & > li{
+                background-color: var(--succes);
+                border: solid hsl( var(--succes-hs) , 60% ) 1px;
+                border-radius: 5px;
+                & > label{
+                    color: black;
+                    &:active{
+                        color: transparent;
+                    }
+                }
+            }
+        }
+        & > section:last-child > div{
+            border-color: var(--succes);
+            & > h1 > a{
+                color: white;
+                &:active{
+                    color: transparent;
+                }
+                &:visited{
+                    color: hsl( var(--succes-hs) , 60% );
+                }
+            }
+        }
+    }
+}
+@keyframes typing {   
+    from{ content: ' |' }
+    1%{   content: ' ' }
+    2%{   content: ' |' }
+    
+    3%{   content: ' D|' }
+    4%{   content: ' De|' }
+    5%{   content: ' Dev|' }
+    6%{   content: ' Deve|' }
+    5%{   content: ' Devel|' }
+    7%{   content: ' Develo|' }
+    8%{   content: ' Develop|' }
+    9%{   content: ' Develope|' }
+    10%{  content: ' Developer|' }
+    11%{  content: ' Developer |' }
+    12%{  content: ' Developer ' }
+    13%{  content: ' Developer |' }
+    14%{  content: ' Developer|' }
+    15%{  content: ' Develope|' }
+    16%{  content: ' Develop|' }
+    17%{  content: ' Develo|' }
+    18%{  content: ' Devel|' }
+    19%{  content: ' Deve|' }
+    20%{  content: ' Dev|' }
+    21%{  content: ' De|' }
+    22%{  content: ' D|' }
+    
+    23%{ content: ' |' }
+    24%{ content: ' ' }
+    25%{ content: ' |' }
+
+    26%{ content: ' D|' }
+    27%{ content: ' De|' }
+    28%{ content: ' Des|' }
+    29%{ content: ' Desi|' }
+    30%{ content: ' Desig|' }
+    31%{ content: ' Design|' }
+    32%{ content: ' Designe|' }
+    33%{ content: ' Designer|' }
+    34%{ content: ' Designer ' }
+    35%{ content: ' Designer|' }
+    36%{ content: ' Designe|' }
+    37%{ content: ' Design|' }
+    38%{ content: ' Desig|' }
+    39%{ content: ' Desi|' }
+    40%{ content: ' Des|' }
+    41%{ content: ' De|' }
+    42%{ content: ' D|' }
+    
+    43%{ content: ' |' }
+    44%{ content: ' ' }
+    45%{ content: ' |' }
+    
+    46%{ content: ' G|' }
+    47%{ content: ' Ga|' }
+    48%{ content: ' Gam|' }
+    49%{ content: ' Game|' }
+    50%{ content: ' Gamer|' }
+    51%{ content: ' Gamer ' }
+    52%{ content: ' Gamer|' }
+    53%{ content: ' Game|' }
+    54%{ content: ' Gam|' }
+    55%{ content: ' Ga|' }
+    56%{ content: ' G|' }
+    
+    57%{ content: ' |' }
+    58%{ content: ' ' }
+    59%{ content: ' |' }
+
+    60%{ content: ' Y|' }
+    61%{ content: ' Yo|' }
+    62%{ content: ' You|' }
+    63%{ content: ' Yout|' }
+    64%{ content: ' Youtu|' }
+    65%{ content: ' Youtub|' }
+    66%{ content: ' Youtube|' }
+    67%{ content: ' Youtuber|' }
+    68%{ content: ' Youtuber ' }
+    69%{ content: ' Youtuber|' }
+    70%{ content: ' Youtube|' }
+    71%{ content: ' Youtub|' }
+    72%{ content: ' Youtu|' }
+    73%{ content: ' Yout|' }
+    74%{ content: ' You|' }
+    75%{ content: ' Yo|' }
+    76%{ content: ' Y|' }
+    
+    77%{ content: ' |' }
+    78%{ content: ' ' }
+    79%{ content: ' |' }
+
+    80%{ content: ' M|' }
+    81%{ content: ' Mu|' }
+    82%{ content: ' Mus|' }
+    83%{ content: ' Musl|' }
+    84%{ content: ' Musli|' }
+    85%{ content: ' Muslim|' }
+    86%{ content: ' Muslim ' }
+    87%{ content: ' Muslim|' }
+    88%{ content: ' Musli|' }
+    89%{ content: ' Musl|' }
+    90%{ content: ' Mus|' }
+    91%{ content: ' Mu|' }
+    92%{ content: ' M|' }
+    
+    93%{ content: ' |' }
+    94%{ content: ' ' }
+    95%{ content: ' |' }
+
+    96%{ content: ' OK|' }
+    97%{ content: ' OK ' }
+    98%{ content: ' OK|' }
+    99%{ content: ' |' }
+    to{  content: ' ' }
+}
+::-webkit-scrollbar{
+    width: 1dvw;
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl( var(--info-hs) , 70% )  ;
+    &:hover{
+        background-color: hsl( var(--primary-hs) , 60% );
+    }
+}
+::-webkit-scrollbar-track{
+    border: solid 1px var(--primary);
+    background-color: transparent;
+}
